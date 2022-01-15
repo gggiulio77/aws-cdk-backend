@@ -1,0 +1,41 @@
+{
+    "env": {
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "airbnb-typescript/base",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "import"
+    ],
+    "rules": {
+        "no-void": ["off"],
+        "import/prefer-default-export": ["off"],
+        "object-curly-newline": ["error", { "consistent": true }],
+        "consistent-return": ["off"],
+        "@typescript-eslint/no-explicit-any": ["off"],
+        "no-console": ["off"],
+        "arrow-body-style": ["off"],
+        "no-param-reassign": ["error", { "props": false }],
+        "max-len": ["error", 150],
+        "class-methods-use-this": ["error", { "exceptMethods": ["serialize"] }],
+        "indent": ["error", 4],
+        "@typescript-eslint/no-non-null-assertion": ["off"],
+        "@typescript-eslint/no-misused-promises": ["off"],
+        "@typescript-eslint/lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+        "@typescript-eslint/ban-ts-comment":["error", {"ts-expect-error": "allow-with-description", "minimumDescriptionLength": 10}],
+        "@typescript-eslint/indent": ["error", 4],
+        "@typescript-eslint/no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": true }],
+        "linebreak-style": "off"
+    }
+}
